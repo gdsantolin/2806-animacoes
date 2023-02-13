@@ -15,8 +15,6 @@ export class ListaTarefasComponent implements OnInit {
   formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
-  indexTarefa: number = -1;
-  id: number = 0;
 
   formulario: FormGroup = this.fomBuilder.group({
     id: [0],
@@ -109,7 +107,6 @@ export class ListaTarefasComponent implements OnInit {
   }
 
   finalizarTarefa(id: number) {
-    this.id = id
     this.service.buscarPorId(id!).subscribe((tarefa) => {
       this.service.atualizarStatusTarefa(tarefa).subscribe(() => {
         this.listarAposCheck();
