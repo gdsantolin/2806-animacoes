@@ -29,31 +29,10 @@
       "prioridade": "Alta"
     },
     {
-      "id": 6,
-      "descricao": "Ler",
-      "categoria": "Estudos",
-      "statusFinalizado": false,
-      "prioridade": "Normal"
-    },
-    {
       "id": 7,
-      "descricao": "Alimentar os gatos",
-      "categoria": "Casa",
-      "statusFinalizado": true,
-      "prioridade": "Alta"
-    },
-    {
-      "id": 8,
-      "descricao": "Criar animação de check",
+      "descricao": "Alimentar os gatos do vizinho",
       "categoria": "Trabalho",
-      "statusFinalizado": true,
-      "prioridade": "Normal"
-    },
-    {
-      "id": 9,
-      "descricao": "Fazer curso de animações",
-      "statusFinalizado": true,
-      "categoria": "Estudos",
+      "statusFinalizado": false,
       "prioridade": "Alta"
     }
   ]
