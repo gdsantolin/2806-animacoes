@@ -48,7 +48,7 @@ export const filterTrigger = trigger('filterAnimation', [
       opacity: 0,
       width: 0,
     }),
-    animate('800ms ease-out', keyframes([
+    animate('1000ms cubic-bezier(.24,.99,.03,-0.3)', keyframes([
       style({
         offset: 0,
         opacity: 0,
@@ -69,7 +69,7 @@ export const filterTrigger = trigger('filterAnimation', [
     ]))
   ]),
   transition(':leave', [
-    animate('800ms ease-out', style({
+    animate('1000ms cubic-bezier(.24,.99,.64,.25)', style({
       opacity: 0,
       width: 0
     }))
