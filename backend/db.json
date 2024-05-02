@@ -32,14 +32,14 @@
       "id": 7,
       "descricao": "Alimentar os gatos do vizinho",
       "categoria": "Trabalho",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "prioridade": "Alta"
     },
     {
       "id": 8,
-      "descricao": "asda",
-      "statusFinalizado": false,
+      "descricao": "asdarg",
       "categoria": "Casa",
+      "statusFinalizado": true,
       "prioridade": "Alta"
     }
   ]

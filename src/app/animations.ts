@@ -116,3 +116,17 @@ export const noResultsTrigger = trigger('noResults', [
     animate(300)
   ])
 ]);
+
+export const shakeTrigger = trigger('shakeAnimation', [
+  transition('* => *', [
+    query('input.ng-invalid:focus, select.ng-invalid:focus', [
+      animate('0.3s', keyframes([
+        style({border: '3px solid red'}),
+        style({transform: 'translateX(-10px)'}),
+        style({transform: 'translateX(10px)'}),
+        style({transform: 'translateX(-10px)'}),
+        style({transform: 'translateX(0)'}),
+      ])),
+    ], {optional: true})
+  ])
+])
