@@ -1,4 +1,4 @@
-import { animate, group, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { animate, group, keyframes, query, state, style, transition, trigger } from '@angular/animations';
 
 export const highlightedStateTrigger = trigger('highlightedState', [
   state('default', style({
@@ -78,29 +78,41 @@ export const filterTrigger = trigger('filterAnimation', [
 
 export const formButtonTrigger = trigger('formButton', [
   transition('invalid => valid', [
-    group([
-      animate(150, style({
-        backgroundColor: '#63B77C',
-      })),
-      animate(150, style({
-        transform: 'scale(1.1)',
+    query('#botao-salvar', [
+      group([
+        animate(150, style({
+          backgroundColor: '#63B77C',
+        })),
+        animate(150, style({
+          transform: 'scale(1.1)',
+        })),
+      ]),
+      animate(300, style({
+        transform: 'scale(1)',
       })),
     ]),
-    animate(300, style({
-      transform: 'scale(1)',
-    })),
   ]),
+
   transition('valid => invalid', [
-    group([
-      animate(150, style({
-        backgroundColor: '#6C757D',
-      })),
-      animate(150, style({
-        transform: 'scale(1.1)',
+    query('#botao-salvar', [
+      group([
+        animate(150, style({
+          backgroundColor: '#6C757D',
+        })),
+        animate(150, style({
+          transform: 'scale(1.1)',
+        })),
+      ]),
+      animate(300, style({
+        transform: 'scale(1)',
       })),
     ]),
-    animate(300, style({
-      transform: 'scale(1)',
-    })),
-  ])
+  ]),
 ])
+
+export const noResultsTrigger = trigger('noResults', [
+  state('void', style({ opacity: 0 })),
+  transition(':enter, :leave', [
+    animate(300)
+  ])
+]);
