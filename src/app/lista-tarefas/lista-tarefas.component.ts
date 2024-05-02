@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { TarefaService } from 'src/app/service/tarefa.service';
 import { Tarefa } from '../interface/tarefa';
-import { checkButtonTrigger, filterTrigger, formButtonTrigger, highlightedStateTrigger, noResultsTrigger, shakeTrigger, shownStateTrigger } from '../animations';
+import { checkButtonTrigger, filterTrigger, formButtonTrigger, highlightedStateTrigger, listStateTrigger, noResultsTrigger, shakeTrigger, shownStateTrigger } from '../animations';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -18,11 +18,12 @@ import { Subscription } from 'rxjs';
     formButtonTrigger,
     noResultsTrigger,
     shakeTrigger,
+    listStateTrigger,
   ]
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
-  formAberto: boolean = true;
+  formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
   indexTarefa: number = -1;
